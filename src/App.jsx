@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   TickerTape, 
   MarketOverview, 
-  AdvancedChart, 
+  AdvancedRealTimeChart, 
   TechnicalAnalysis 
 } from "react-ts-tradingview-widgets";
 import './index.css';
@@ -53,18 +53,16 @@ function App() {
           <div className="chart-container glass">
             <h2>Gelişmiş Grafik ({symbol})</h2>
             <div className="widget-box" style={{ height: '500px' }}>
-              <AdvancedChart 
-                widgetProps={{
-                  theme: "dark",
-                  symbol: symbol,
-                  interval: "D",
-                  style: "1",
-                  locale: "tr",
-                  enable_publishing: false,
-                  allow_symbol_change: true,
-                  calendar: false,
-                  autosize: true
-                }} 
+              <AdvancedRealTimeChart 
+                theme="dark"
+                symbol={symbol}
+                interval="D"
+                style="1"
+                locale="tr"
+                enable_publishing={false}
+                allow_symbol_change={true}
+                calendar={false}
+                autosize={true}
               />
             </div>
           </div>
