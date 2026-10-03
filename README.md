@@ -1,16 +1,19 @@
-# React + Vite
+# Borsa Zekası - AI Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Borsa İstanbul ve küresel piyasalar için TradingView widget'larıyla hazırlanmış interaktif panel: kayan fiyat şeridi, gelişmiş grafik, teknik analiz kadranı ve piyasa özeti. Üstteki arama kutusundan sembol değiştirilebilir (örn. `BIST:THYAO`, `NASDAQ:AAPL`, `BINANCE:BTCUSDT`).
 
-Currently, two official plugins are available:
+> Panel yalnızca bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Geliştirme
 
-## React Compiler
+```bash
+npm install
+npm run dev      # geliştirme sunucusu
+npm run lint     # oxlint
+npm run build    # üretim derlemesi
+npm run deploy   # GitHub Pages'e yayınlar (gh-pages)
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`vite.config.js` içindeki `base: '/market-ai-dashboard/'` ayarı GitHub Pages yolu içindir; repo adı değişirse güncelleyin.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Teknolojiler: React, Vite, react-ts-tradingview-widgets.
