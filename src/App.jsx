@@ -40,6 +40,7 @@ function App() {
           <input 
             type="text" 
             name="ticker" 
+            aria-label="Sembol ara"
             placeholder="Hisse veya Kripto arayın (Örn: THYAO, AAPL, BTCUSDT)" 
             className="search-input"
           />
@@ -122,6 +123,11 @@ function App() {
           </div>
         </div>
       </main>
+
+      <footer className="disclaimer" style={{ textAlign: 'center', opacity: 0.7, fontSize: '12px', padding: '16px' }}>
+        Bu panel yalnızca bilgilendirme amaçlıdır; gösterilen teknik analiz sinyalleri yatırım tavsiyesi değildir.
+        Veriler TradingView widget'larından gelir.
+      </footer>
     </div>
   );
 }
